@@ -39,7 +39,7 @@ class GLFW
 
     while @running do
       now = Time.now
-      yield @last_update - now
+      yield now - @last_update
       @last_update = now
 
       GLFW::C.glfwSwapBuffers
